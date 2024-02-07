@@ -38,6 +38,19 @@ updateColor()
 
 function copyValue(){
 
+    let red=redSlider.value;
+    let green=greenSlider.value;
+    let blue=blueSlider.value;
+
+    const rgbColor=`rgb(${red},${green},${blue})`;
+
+    navigator.clipboard.writeText(rgbColor).then(()=>{
+        alert("RGB Color Value copied to Clipvoard: " + rgbColor);
+
+    }).catch((error)=>{
+        console.log("Failed to copy RGB Values",error)
+    })
+
 
 
 }
